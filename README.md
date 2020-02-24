@@ -4,7 +4,7 @@
 
 The purpose of this package is to simulate a group of three turtlebots 3 in a Hospital environment. 
 This package was inspired by the tutorials from [ROBOTIS](http://robotis.com/) for [turtlebot3](http://emanual.robotis.com/docs/en/platform/turtlebot3/specifications/)
-Each robot has a 360º lidar, two wheels and a camera and they can be controlled using the topic _/cmd_vel_ as any other mobile robot in ROS ([REP-105](https://www.ros.org/reps/rep-0105.html)).
+Each robot has a 360° lidar, two wheels and a camera and they can be controlled using the topic _/cmd_vel_ as any other mobile robot in ROS ([REP-105](https://www.ros.org/reps/rep-0105.html)).
 
 The code in this package can be used either with **simulated robots** or with **real robots**:
 
@@ -43,7 +43,7 @@ catkin_make
 
 
 ## Run the Simulation
-The Simulation uses the well known Gazebo Simulated that is shiped with ROS. 
+The Simulation uses the well known Gazebo Simulated that is shipped with ROS.
 
 * Before running the simulation, you must install the turtlebot3 packages.
 
@@ -59,12 +59,16 @@ Run the simulation to test the code:
     roslaunch turtlebot3_hospital_sim turtles_in_a_hospital.launch
     ```
 
-This will open the Gazebo with the robots in posistion and ready to go.
+This will open the Gazebo with the robots in position and ready to go.
+
+## Youtube Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YcMHVNv3jME" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## Some kind of Roadmap
+## Some kind of Road map
 
-In a Hospital environment, it is expected to have many different robots with different capabilities where they can reach some goals as a team without contraints. So a team with robots with or without manipulation, with or without mobility, can be built and simulated to reach cooperative goals.
+In a hospital environment, many different robots with different capabilities can be used where they can reach some goals as a team without constraints. So a team with robots with or without manipulation, with or without mobility, can be built and simulated to reach cooperative goals.
 
 
 
