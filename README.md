@@ -45,12 +45,16 @@ catkin_make
 ## Run the Simulation
 The Simulation uses the well known Gazebo Simulated that is shipped with ROS.
 
+#### Dependencies
+
 * Before running the simulation, you must install the turtlebot3 packages.
 
     ```bash
     sudo apt install ros-melodic-turtlebot3-simulations ros-melodic-turtlebot3-bringup
     catkin_make
     ```
+
+#### Running
 
 Run the simulation to test the code:
 
@@ -63,7 +67,7 @@ This will open the Gazebo with the robots in position and ready to go.
 
 ## Youtube Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YcMHVNv3jME" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Presentation](https://img.youtube.com/vi/YcMHVNv3jME/0.jpg)](https://www.youtube.com/watch?v=YcMHVNv3jME)
 
 
 ## Some kind of Road map
