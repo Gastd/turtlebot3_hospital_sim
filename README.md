@@ -3,7 +3,7 @@
 ## Overview
 
 The purpose of this package is to simulate a group of three turtlebots 3 in a Hospital environment. 
-This package was inspired by the tutorials from [ROBOTIS](http://robotis.com/) for [turtlebot3](http://emanual.robotis.com/docs/en/platform/turtlebot3/specifications/)
+This package was inspired by the tutorials from [ROBOTIS](http://robotis.com/) for [turtlebot3](http://emanual.robotis.com/docs/en/platform/turtlebot3/specifications/).
 Each robot has a 360° lidar, two wheels and a camera and they can be controlled using the topic _/cmd_vel_ as any other mobile robot in ROS ([REP-105](https://www.ros.org/reps/rep-0105.html)).
 
 The code in this package can be used either with **simulated robots** or with **real robots**:
@@ -43,7 +43,7 @@ catkin_make
 
 
 ## Run the Simulation
-The Simulation uses the well known Gazebo Simulated that is shipped with ROS.
+The Simulation uses the well known Gazebo Simulator that is shipped with ROS.
 
 #### Dependencies
 
