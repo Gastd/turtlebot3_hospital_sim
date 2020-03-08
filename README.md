@@ -38,6 +38,7 @@ Clone this repository to your catkin workspace.
 cd ${YOUR_WORKSPACE_PATH}/src
 git clone https://github.com/Gastd/turtlebot3_hospital_sim.git
 cd ../
+source devel/setup.bash
 catkin_make
 ```
 
