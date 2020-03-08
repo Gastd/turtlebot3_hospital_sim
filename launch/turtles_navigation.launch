@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="first_tb3"  default="R1"/>
+  <arg name="second_tb3" default="R3"/>
+  <arg name="third_tb3"  default="R5"/>
+
+  <group ns = "$(arg first_tb3)">
+    <include file="$(find turtlebot3_hospital_sim)/launch/amcl_demo.launch" />
+    <!-- <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0.7 -4 0 0 3.1415 0 map odom 10" /> -->
+    <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0.7 0 0 3.1415 0 0 map odom 10" />
+  </group>
+
+  <group ns = "$(arg second_tb3)">
+  </group>
+
+  <group ns = "$(arg third_tb3)">
+  </group>
+
+</launch>
