@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="first_tb3"  default="tb3_0"/>
-  <arg name="second_tb3" default="tb3_1"/>
-  <arg name="third_tb3"  default="tb3_2"/>
+  <arg name="first_tb3"  default="R1"/>
+  <arg name="second_tb3" default="R3"/>
+  <arg name="third_tb3"  default="R5"/>
 
   <arg name="first_tb3_x_pos" default="-0.0"/>
   <arg name="first_tb3_y_pos" default="-0.0"/>
@@ -30,7 +30,7 @@
   </include>
 
   <group ns = "$(arg first_tb3)">
-    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_burger.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_hospital_sim)/urdf/turtlebot3_burger.urdf.xacro" />
 
     <!-- <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" >
       <param name="tf_prefix" value="$(arg first_tb3)" />
@@ -43,10 +43,10 @@
     
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg first_tb3) -x $(arg first_tb3_x_pos) -y $(arg first_tb3_y_pos) -z $(arg first_tb3_z_pos) -Y $(arg first_tb3_yaw) -param robot_description" />
   </group>
-  <node pkg="tf" type="static_transform_publisher" name="robot1_broadcaster" args="0 0 0 0 0 0 odom $(arg first_tb3)/odom 10" />
+  <node pkg="tf" type="static_transform_publisher" name="$(arg first_tb3)_broadcaster" args="0 0 0 0 0 0 odom $(arg first_tb3)/odom 10" />
 
   <group ns = "$(arg second_tb3)">
-    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_waffle.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_hospital_sim)/urdf/turtlebot3_waffle.urdf.xacro" />
 
     <!-- <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" >
       <param name="tf_prefix" value="$(arg second_tb3)" />
@@ -59,10 +59,10 @@
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg second_tb3) -x $(arg second_tb3_x_pos) -y $(arg second_tb3_y_pos) -z $(arg second_tb3_z_pos) -Y $(arg second_tb3_yaw) -param robot_description" />
   </group>
-  <node pkg="tf" type="static_transform_publisher" name="robot2_broadcaster" args="0 0 0 0 0 0 odom $(arg second_tb3)/odom 10" />
+  <node pkg="tf" type="static_transform_publisher" name="$(arg second_tb3)_broadcaster" args="0 0 0 0 0 0 odom $(arg second_tb3)/odom 10" />
 
   <group ns = "$(arg third_tb3)">
-    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_waffle_pi.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_hospital_sim)/urdf/turtlebot3_waffle.urdf.xacro" />
 
     <!-- <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" >
       <param name="tf_prefix" value="$(arg third_tb3)" />
@@ -75,6 +75,6 @@
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg third_tb3) -x $(arg third_tb3_x_pos) -y $(arg third_tb3_y_pos) -z $(arg third_tb3_z_pos) -Y $(arg third_tb3_yaw) -param robot_description" />
   </group>
-  <node pkg="tf" type="static_transform_publisher" name="robot3_broadcaster" args="0 0 0 0 0 0 odom $(arg third_tb3)/odom 10" />
+  <node pkg="tf" type="static_transform_publisher" name="$(arg third_tb3)_broadcaster" args="0 0 0 0 0 0 odom $(arg third_tb3)/odom 10" />
 
 </launch>
