@@ -42,11 +42,12 @@
     </node>
     
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg first_tb3) -x $(arg first_tb3_x_pos) -y $(arg first_tb3_y_pos) -z $(arg first_tb3_z_pos) -Y $(arg first_tb3_yaw) -param robot_description" />
+  <node name="r1_publisher" type="r1_publisher.py" pkg="turtlebot3_hospital_sim"/>
   </group>
   <node pkg="tf" type="static_transform_publisher" name="$(arg first_tb3)_broadcaster" args="0 0 0 0 0 0 odom $(arg first_tb3)/odom 10" />
 
   <group ns = "$(arg second_tb3)">
-    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_hospital_sim)/urdf/turtlebot3_waffle.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_hospital_sim)/urdf/turtlebot3_burger.urdf.xacro" />
 
     <!-- <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" >
       <param name="tf_prefix" value="$(arg second_tb3)" />
@@ -58,11 +59,12 @@
     </node>
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg second_tb3) -x $(arg second_tb3_x_pos) -y $(arg second_tb3_y_pos) -z $(arg second_tb3_z_pos) -Y $(arg second_tb3_yaw) -param robot_description" />
+  <node name="r3_publisher" type="r3_publisher.py" pkg="turtlebot3_hospital_sim"/>
   </group>
   <node pkg="tf" type="static_transform_publisher" name="$(arg second_tb3)_broadcaster" args="0 0 0 0 0 0 odom $(arg second_tb3)/odom 10" />
 
   <group ns = "$(arg third_tb3)">
-    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_hospital_sim)/urdf/turtlebot3_waffle.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_hospital_sim)/urdf/turtlebot3_burger.urdf.xacro" />
 
     <!-- <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" >
       <param name="tf_prefix" value="$(arg third_tb3)" />
@@ -74,7 +76,9 @@
     </node>
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg third_tb3) -x $(arg third_tb3_x_pos) -y $(arg third_tb3_y_pos) -z $(arg third_tb3_z_pos) -Y $(arg third_tb3_yaw) -param robot_description" />
+  <node name="r5_publisher" type="r5_publisher.py" pkg="turtlebot3_hospital_sim"/>
   </group>
   <node pkg="tf" type="static_transform_publisher" name="$(arg third_tb3)_broadcaster" args="0 0 0 0 0 0 odom $(arg third_tb3)/odom 10" />
+  <node name="hospital" type="hospital.py" pkg="turtlebot3_hospital_sim"/>
 
 </launch>
