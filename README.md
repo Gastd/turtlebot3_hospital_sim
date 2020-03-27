@@ -72,6 +72,11 @@ This will open the Gazebo with the robots in position and ready to go.
 " target="_blank"><img src="http://img.youtube.com/vi/YcMHVNv3jME/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="860" border="10" /></a>
 
+# Navigation Demo
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=tlY0Dh7u6Jk
+" target="_blank"><img src="http://img.youtube.com/vi/tlY0Dh7u6Jk/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="860" border="10" /></a>
+
 
 ## Some kind of Road map
 
