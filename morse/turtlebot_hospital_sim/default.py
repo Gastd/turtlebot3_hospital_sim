@@ -8,7 +8,7 @@ from turtlebot_hospital_sim.Turtlebot import Turtlebot
 
 PATH = "/".join(__file__.split("/")[:-1])
 
-robot = Turtlebot()
+robot = Turtlebot(name='turtlebot1')
 robot.add_to_simulation()
 
 robot2 = Turtlebot(name='turtlebot2')

@@ -20,9 +20,9 @@ class Turtlebot(Robot):
     def add_motion_sensor(self):
         self.motion = MotionVW()
         self.append(self.motion)
-        self.motion.add_interface('ros', topic=f"/cmd_vel_{self.name}")
+        self.motion.add_interface('ros', topic=f"{self.name}/cmd_vel")
 
     def add_pose_sensor(self):
         self.pose = Pose()
         self.append(self.pose)
-        self.pose.add_interface('ros', topic=f"/pose_{self.name}")
+        self.pose.add_interface('ros', topic=f"{self.name}/pose")
