@@ -6,10 +6,16 @@
 from morse.builder import *
 from turtlebot_hospital_sim.Turtlebot import Turtlebot
 
+
 PATH = "/".join(__file__.split("/")[:-1])
 
-robot = Turtlebot(name='turtlebot1')
-robot.add_to_simulation()
+robot1 = Turtlebot(name='turtlebot1')
+robot1.add_to_simulation()
+
+# Clock
+clock = Clock()
+robot1.append(clock)
+clock.add_interface('ros', topic="/clock")
 
 robot2 = Turtlebot(name='turtlebot2')
 robot2.add_to_simulation(x=-25)
