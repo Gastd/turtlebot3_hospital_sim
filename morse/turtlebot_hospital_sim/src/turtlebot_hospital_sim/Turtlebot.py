@@ -13,6 +13,7 @@ class Turtlebot(Robot):
     def add_to_simulation(self, x=-19, y=-3, z=0,
                           x_rot=0, y_rot=0, z_rot=0):
         self.rotate(x_rot, y_rot, z_rot)
+        self.translate(x, y, z)
         self.add_motion_sensor()
         self.add_pose_sensor()
         self.add_lidar_sensor()
