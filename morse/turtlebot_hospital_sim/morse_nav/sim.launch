@@ -1,0 +1,5 @@
+<launch>
+  <param name="robot_description" command="cat $(find morse_nav)/turtlebot.urdf" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find morse_nav)/map.yaml" />
+</launch>

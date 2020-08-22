@@ -12,11 +12,12 @@ class Turtlebot(Robot):
 
     def add_to_simulation(self, x=-19, y=-3, z=0,
                           x_rot=0, y_rot=0, z_rot=0):
-        self.rotate(x_rot, y_rot, z_rot)
         self.translate(x, y, z)
+        self.rotate(x_rot, y_rot, z_rot)
         self.add_motion_sensor()
         self.add_pose_sensor()
         self.add_lidar_sensor()
+        self.add_odometry_sensor()
 
     def add_lidar_sensor(self):
         self.lidar = Hokuyo()
@@ -34,6 +35,13 @@ class Turtlebot(Robot):
         self.motion.add_interface('ros', topic=f"{self.name}/cmd_vel")
 
     def add_pose_sensor(self):
+        # Current position
         self.pose = Pose()
         self.append(self.pose)
         self.pose.add_interface('ros', topic=f"{self.name}/pose")
+
+    def add_odometry_sensor(self):
+        # Displacement since last Blender tick
+        self.odometry = Odometry()
+        self.append(self.odometry)
+        self.odometry.add_interface('ros', topic=f"{self.name}/odom")

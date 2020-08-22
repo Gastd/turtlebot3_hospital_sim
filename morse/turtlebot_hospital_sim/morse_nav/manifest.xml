@@ -1,0 +1,8 @@
+<package>
+  <description brief="turtlebot_hospital_sim">
+    Simulation for Hospital Environment in Morse for Runtime Verification
+  </description>
+  <depend package="move_base"/>
+  <depend package="map_server"/>
+  <depend package="robot_state_publisher"/>
+</package>
