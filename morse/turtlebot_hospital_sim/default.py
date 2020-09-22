@@ -20,6 +20,11 @@ clock.add_interface('ros', topic="/clock")
 robot2 = Turtlebot(name='turtlebot2')
 robot2.add_to_simulation(x=-25)
 
+# Charging Zone
+charging_zone = Zone(type='Charging')
+charging_zone.size=[5 for x in range(3)]
+charging_zone.translate(x=-19, y=-3, z=0)
+
 # set 'fastmode' to True to switch to wireframe mode
 env = Environment(f'{PATH}/models/cic.blend', fastmode=False)
 env.set_horizon_color(color=(0.65, 0.65, 0.65))
