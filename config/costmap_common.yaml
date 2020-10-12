@@ -1,10 +1,10 @@
 footprint: [[-0.089, -0.069], [-0.089, 0.069], [0.089, 0.069], [0.089, -0.069]]
 footprint_padding: 0.01
 
-robot_base_frame: R1/base_link
-update_frequency: 3.0
-publish_frequency: 3.0
-transform_tolerance: 2
+robot_base_frame: base_footprint
+update_frequency: .5
+publish_frequency: .5
+transform_tolerance: 5
 
 resolution: 0.02
 
@@ -13,12 +13,12 @@ raytrace_range: 3.0
 
 #layer definitions
 static:
-    map_topic: /R1/map
+    map_topic: map
     subscribe_to_updates: true
 
 obstacles_laser:
     observation_sources: laser
-    laser: {data_type: LaserScan, clearing: true, marking: true, topic: /R1/scan, inf_is_valid: true}
+    laser: {data_type: LaserScan, clearing: true, marking: true, topic: lidar, inf_is_valid: true}
 
 inflation:
     inflation_radius: 0.30

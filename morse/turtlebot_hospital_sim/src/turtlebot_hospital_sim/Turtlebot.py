@@ -29,7 +29,7 @@ class Turtlebot(Robot):
         self.lidar.properties(resolution = 1.0)
         self.lidar.properties(scan_window = 180.0)
         self.lidar.create_laser_arc()
-        self.lidar.add_interface('ros', topic=f"{self.name}/lidar", frame_id=f"{self.name}/base_laser_link")
+        self.lidar.add_interface('ros', topic=f"{self.name}/lidar", frame_id=f"base_laser_link")
 
     def add_motion_sensor(self):
         self.motion = MotionVW()
@@ -46,7 +46,7 @@ class Turtlebot(Robot):
         # Displacement since last Blender tick
         self.odometry = Odometry()
         self.append(self.odometry)
-        self.odometry.add_interface('ros', topic=f"{self.name}/odom", frame_id=f"{self.name}/odom", child_frame_id=f"{self.name}/base_footprint")
+        self.odometry.add_interface('ros', topic=f"{self.name}/odom", frame_id=f"odom", child_frame_id=f"base_footprint")
 
     def add_battery_sensor(self, discharge_rate):
         self.battery = Battery()
