@@ -1,15 +1,16 @@
-footprint: [[-0.33, -0.33], [-0.33, 0.33], [0.33, 0.33], [0.33, -0.33]]
-footprint_padding: 0.01
+footprint: [[-0.263, -0.267], [-0.263, 0.267], [0.263, 0.267], [0.263, -0.267]]
+robot_radius: 0.138
+footprint_padding: 0.001
 
-robot_base_frame: base_footprint
-update_frequency: 1
-publish_frequency: 1
+# robot_base_frame: base_footprint
+update_frequency: 3
+publish_frequency: 3
 transform_tolerance: 10
 
 resolution: 0.02
 
-obstacle_range: 7.0
-raytrace_range: 7.0
+obstacle_range: 5.0
+raytrace_range: 5.0
 
 #layer definitions
 static:
@@ -21,4 +22,4 @@ obstacles_laser:
     lidar: {data_type: LaserScan, clearing: true, marking: true, topic: lidar, inf_is_valid: true}
 
 inflation:
-    inflation_radius: 1.0
+    inflation_radius: 1.5
