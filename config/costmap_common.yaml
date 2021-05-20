@@ -5,7 +5,7 @@ footprint_padding: 0.001
 # robot_base_frame: base_footprint
 update_frequency: 3
 publish_frequency: 3
-transform_tolerance: 10
+transform_tolerance: 50
 
 resolution: 0.02
 

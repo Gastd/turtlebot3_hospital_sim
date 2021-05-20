@@ -3,8 +3,8 @@
     <arg name="no_static_map" default="false"/>
     <arg name="robot_name" default="$(env ROBOT_NAME)"/>
 
-    <!-- <arg name="base_global_planner" default="navfn/NavfnROS"/> -->
-    <arg name="base_global_planner" default="global_planner/GlobalPlanner"/>
+    <arg name="base_global_planner" default="navfn/NavfnROS"/>
+    <!-- <arg name="base_global_planner" default="global_planner/GlobalPlanner"/> -->
     <arg name="base_local_planner" default="dwa_local_planner/DWAPlannerROS"/>
     <!-- <arg name="base_local_planner" default="base_local_planner/TrajectoryPlannerROS"/> -->
 
@@ -34,7 +34,7 @@
         <param name="global_costmap/robot_base_frame" value="$(arg robot_name)/base_footprint"/>
         <param name="local_costmap/robot_base_frame" value="$(arg robot_name)/base_footprint"/>
         <param name="local_costmap/global_frame" value="$(arg robot_name)/odom"/>
-        <param name="global_frame_id" value="/map"/>
+        <param name="global_frame_id" value="map"/>
         <remap from="map" to="/$(arg robot_name)/map" />
 
         <!-- Remap into namespace for cmd_vel_mux switching -->
