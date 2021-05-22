@@ -3,14 +3,16 @@ robot_radius: 0.138
 footprint_padding: 0.001
 
 # robot_base_frame: base_footprint
-update_frequency: 3
-publish_frequency: 3
+update_frequency: 5
+publish_frequency: 2
 transform_tolerance: 50
 
 resolution: 0.02
 
 obstacle_range: 5.0
 raytrace_range: 5.0
+cost_scaling_factor: 2.0
+
 
 #layer definitions
 static:
