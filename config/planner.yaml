@@ -1,4 +1,4 @@
-controller_frequency: 10
+controller_frequency: 15
 recovery_behaviour_enabled: true
 
 NavfnROS:
@@ -43,7 +43,7 @@ TrajectoryPlannerROS:
   # Goal Tolerance Parameters
   yaw_goal_tolerance: 0.1
   xy_goal_tolerance: 0.2
-  latch_xy_goal_tolerance: false
+  latch_xy_goal_tolerance: true
 
   # Forward Simulation Parameters
   sim_time: 2.0
@@ -76,15 +76,16 @@ DWAPlannerROS:
   acc_lim_x: 20.0
   acc_lim_y: 0
   acc_lim_th: 3.2
+  acc_lim_trans: 20.0
 
   max_vel_x: 2.5
-  min_vel_x: -1.0
+  min_vel_x: 0
   max_vel_y: 0
   min_vel_y: 0
 
   max_vel_trans: 2.5
-  min_vel_trans: 0.75
-  max_vel_theta: 1.0
+  min_vel_trans: 0.5
+  max_vel_theta: 2.0
   min_vel_theta: 0.0
 
   # Goal Tolerance Parameters
@@ -95,13 +96,14 @@ DWAPlannerROS:
   # # Forward Simulation Parameters
   sim_time: 3.0
   sim_granularity: 0.2
-  vx_samples: 6
+  # angular_sim_granularity: 0.02
+  vx_samples: 20
   vy_samples: 0
   vtheta_samples: 20
   penalize_negative_x: true
 
   # # Trajectory scoring parameters
-  path_distance_bias: 64.0 # The weighting for how much the controller should stay close to the path it was given
+  path_distance_bias: 100.0 # The weighting for how much the controller should stay close to the path it was given
   goal_distance_bias: 24.0 # The weighting for how much the controller should attempt to reach its local goal, also controls speed
   occdist_scale: 0.005 # The weighting for how much the controller should attempt to avoid obstacles
   forward_point_distance: 0.325 # The distance from the center point of the robot to place an additional scoring point, in meters
