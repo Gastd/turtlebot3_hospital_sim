@@ -1,4 +1,4 @@
-footprint: [[-0.263, -0.267], [-0.263, 0.267], [0.263, 0.267], [0.263, -0.267]]
+# footprint: [[-0.263, -0.267], [-0.263, 0.267], [0.263, 0.267], [0.263, -0.267]]
 robot_radius: 0.275
 footprint_padding: 0.001
 
@@ -11,7 +11,7 @@ resolution: 0.02
 
 obstacle_range: 5.0
 raytrace_range: 5.0
-cost_scaling_factor: 1.5
+cost_scaling_factor: 2.0
 
 
 #layer definitions
